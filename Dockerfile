@@ -18,7 +18,7 @@ RUN dnf -y update && \
     groupadd -g 1000 sweepstakes && \
     useradd -u 1000 -g sweepstakes -s /sbin/nologin -m sweepstakes && \
     echo > /etc/issue && echo > /etc/issue.net && echo > /etc/motd && \
-    Rmkdir /home/sweepstakes -p && \
+    mkdir /home/sweepstakes -p && \
     chmod 700 /home/sweepstakes && \
     chown sweepstakes:sweepstakes /home/sweepstakes && \
     echo 'set +o history' >> /root/.bashrc && \
